@@ -1,8 +1,10 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <queue>
 using namespace std;
-#define rep(i, n) for (int i = 0; i < (n); i++)
 
-int R, C, sx, sy, gx, gy;
+#define rep(i, s, n) for (int i = (s); i < (n); i++)
+
+int max_y, max_x, sx, sy, gx, gy;
 char maze[51][51];
 int minmove[51][51];
 int dx[4] = {1, 0, -1, 0};
@@ -14,32 +16,28 @@ struct position
 };
 queue<position> q;
 
-
-
 int main()
 {
-    cin >> R >> C >> sy >> sx >> gy >> gx;
-    // rep(i, R)
-    for (int i = 1; i < (R+1); i++)
+    cin >> max_y >> max_x >> sy >> sx >> gy >> gx;
+
+
+    rep(j, 1, max_y+1)
     {
-        // rep(j, C)
-        for (int j = 1; j < (C+1); j++)
+        rep(i, 1, max_x+1)
         {
             cin >> maze[i][j];
             minmove[i][j] = -1;
         }
+
     }
 
     minmove[sx][sy] = 0;
     q.push(position{sx, sy});
 
-    cout << gy << gx << endl;
+    // cout << gy << gx << endl;
     while (!q.empty())
     {
         struct position present = q.front();
-        cout << present.x << ":" << present.y << ":" << minmove[present.x][present.y] << endl;
-        cout << maze[present.x][present.y] << ":" <<  << endl;
-        
 
         if (present.x == gx && present.y == gy)
         {
@@ -47,12 +45,14 @@ int main()
             return 0;
         }
 
-        rep(i, 4)
+        rep(i, 0, 4)
         {
-            if (maze[present.x+dx[i]][present.y+dy[i]] == '.' && minmove[present.x+dx[i]][present.y+dy[i]] == -1)
+            int next_x = present.x + dx[i];
+            int next_y = present.y + dy[i];
+           if (maze[next_x][next_y] == '.' && minmove[next_x][next_y] == -1)
             {
-                minmove[present.x+dx[i]][present.y+dy[i]] = minmove[present.x][present.y] + 1;
-                q.push(position{present.x+dx[i], present.y+dy[i]});
+                minmove[next_x][next_y] = minmove[present.x][present.y] + 1;
+                q.push(position{next_x, next_y});
             }
         }
         q.pop();
