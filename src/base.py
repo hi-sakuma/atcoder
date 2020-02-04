@@ -3,6 +3,7 @@ n = input()
 n = int(input())
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
+a = [int(input()) for _ in range(n)]
 
 # 最大公約数、最小公倍数
 def gcd(a, b):
