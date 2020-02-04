@@ -37,3 +37,8 @@ def fact(x, mod=1):
 
 def comb(n, k, mod=1):
     return (fact(n, mod) * inv(fact(n-k, mod), mod) * inv(fact(k, mod), mod)) % mod
+
+# bit演算
+# ~x = -(x + 1)
+# 1からn-1までの総和 n*(n-1)//2のbit演算を用いた書き方
+# n*~-n//2
