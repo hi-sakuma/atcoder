@@ -1,9 +1,25 @@
+'''
 # 入力
-n = input()
+s = input()
+s, t = input().split()
 n = int(input())
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
 a = [int(input()) for _ in range(n)]
+'''
+
+'''
+#出力
+print("Yes" if True else "No")
+print("No" if False else "Yes")
+'''
+
+
+''' 
+切り捨て
+a // b
+# 切り上げ
+-(-a // b)
 
 # 最大公約数、最小公倍数
 def gcd(a, b):
@@ -43,3 +59,10 @@ def comb(n, k, mod=1):
 # ~x = -(x + 1)
 # 1からn-1までの総和 n*(n-1)//2のbit演算を用いた書き方
 # n*~-n//2
+
+'''
+
+'''
+# 文字列リストの結合
+"".join()
+'''
