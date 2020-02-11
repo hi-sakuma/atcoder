@@ -21,6 +21,9 @@ oj login https://atcoder.jp/
 ### ログイン確認
 acc session
 
+### 提出
+acc submint main.py
+
 ## adcoder-toolsの使い方
 ### 入力フォーマット付きコード生成
 atcoder-tools gen [contest_id] --workspace /atcoder/workspace

@@ -11,6 +11,7 @@ AB = [list(map(int,input().split())) for _ in range(n)]
 
 '''
 #出力
+print("YES" if True else "NO")
 print("Yes" if True else "No")
 print("No" if False else "Yes")
 '''
