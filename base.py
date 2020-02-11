@@ -6,6 +6,7 @@ n = int(input())
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
 a = [int(input()) for _ in range(n)]
+AB = [list(map(int,input().split())) for _ in range(n)]
 '''
 
 '''
