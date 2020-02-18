@@ -1,27 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-
-void solve(std::string S, std::string T, long long A, long long B, std::string U){
-    if(U == S){
-        A -= 1;
-    } else {
-        B -= 1;
-    }
-    std::cout << A << " " << B << endl;
-}
+#define rep(i, s, n) for (int i = (s); i < (n); i++)
+#define ll long long
+#define ull unsigned long long
 
 int main(){
-    std::string S;
-    std::cin >> S;
-    std::string T;
-    std::cin >> T;
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    std::string U;
-    std::cin >> U;
-    solve(S, T, A, B, U);
+    int n, m;
+    cin >> n >> m;
+    vector<int> Ls(m), Rs(m);
+    // int Ls[m], Rs[m];
+    rep(i, 0, m){
+        cin >> Ls[i] >> Rs[i];
+    }
+
+    int maxL = *max_element(Ls.begin(), Ls.end());
+    int minR = *min_element(Rs.begin(), Rs.end());
+    int ans = max(0, minR - maxL + 1);
+    cout << ans << endl;
     return 0;
 }
