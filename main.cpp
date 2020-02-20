@@ -1,22 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define rep(i, n) for(int i = 0; i < (int)(n); i++)
 #define rep(i, s, n) for (int i = (s); i < (n); i++)
-#define ll long long
-#define ull unsigned long long
 
 int main(){
-    int n, m;
-    cin >> n >> m;
-    vector<int> Ls(m), Rs(m);
-    // int Ls[m], Rs[m];
-    rep(i, 0, m){
-        cin >> Ls[i] >> Rs[i];
-    }
+    int n;
+    cin >> n;
 
-    int maxL = *max_element(Ls.begin(), Ls.end());
-    int minR = *min_element(Rs.begin(), Rs.end());
-    int ans = max(0, minR - maxL + 1);
-    cout << ans << endl;
+    int A[n];
+    rep(i, 0, n) {cin >> A[i];}
+
+    string s = "";
+    rep(k, 0, n) {s += A[k];}
+    cout << s << endl;
+
+    rep(i, 1, n){
+        int v = A[i];
+        int j = i - 1;
+        while(j >= 0 && A[j] > v){
+            A[j+1] = A[j];
+            j--;
+        }
+        A[j+1] = v;
+        s = "";
+        rep(k, 0, n) {s += A[k];}
+        cout << s << endl;
+    }
     return 0;
 }
