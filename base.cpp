@@ -1,12 +1,10 @@
 #include <bits/stdc++.h>
-#include <iostream>
-#include <cmath>
-#include <vector>
 using namespace std;
 #define rep(i, s, n) for (int i = (s); i < (n); i++)
+#define all(v) v.begin(), v.end()
+#define co(s) cout << (s) << endl
 #define ll long long
-#define ull unsigned long long
-
+#define MOD 10000007
 
 /*
 int main()
