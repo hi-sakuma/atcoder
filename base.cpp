@@ -11,15 +11,7 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int x;
-    cin >> x;
 
-    int n, m;
-    cin >> n >> m;
-    int a[n];
-    rep(i, 0, n) cin >> a[i];
-
-    cout << x << endl;
 }
 
 
