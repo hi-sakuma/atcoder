@@ -7,8 +7,12 @@ using namespace std;
 #define ll long long
 #define ull unsigned long long
 
+
+/*
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     int x;
     cin >> x;
 
@@ -20,6 +24,7 @@ int main()
     cout << x << endl;
 }
 
+
 ll gcd(ll a, ll b) {
     if (b==0) return a;
     else return gcd(b, a%b);
@@ -28,3 +33,10 @@ ll gcd(ll a, ll b) {
 ll lcm(ll a, ll b) {
     return b / gcd(a, b) * a;
 }
+
+*/
+
+/* bit演算
+    for (int bit = 0; bit < (1<<n); bit++) {
+    }
+*/

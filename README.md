@@ -1,5 +1,7 @@
 # atcoder
 
+
+
 ## 概要
 cppとpythonが使用可能なatcoder用開発環境
 
@@ -50,3 +52,14 @@ oj t -c "python main.py"
 oj s main.cpp
 oj s main.py -l python3 
 oj s https://codeforces.com/contest/1200/problem/F
+
+
+## 参考URL
+
+- atcoder
+
+    https://atcoder.jp/?lang=ja
+
+- ALDS
+
+    https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/1
