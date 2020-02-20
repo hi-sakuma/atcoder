@@ -4,7 +4,8 @@
 #include <vector>
 using namespace std;
 #define rep(i, s, n) for (int i = (s); i < (n); i++)
-
+#define ll long long
+#define ull unsigned long long
 
 int main()
 {
@@ -17,4 +18,13 @@ int main()
     rep(i, 0, n) cin >> a[i];
 
     cout << x << endl;
+}
+
+ll gcd(ll a, ll b) {
+    if (b==0) return a;
+    else return gcd(b, a%b);
+}
+
+ll lcm(ll a, ll b) {
+    return b / gcd(a, b) * a;
 }

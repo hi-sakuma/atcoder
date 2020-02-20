@@ -1,27 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define rep(i, s, n) for (int i = (s); i < (n); i++)
+#define ll long long
+#define ull unsigned long long
 
-
-void solve(std::string S, std::string T, long long A, long long B, std::string U){
-    if(U == S){
-        A -= 1;
-    } else {
-        B -= 1;
-    }
-    std::cout << A << " " << B << endl;
+ll gcd(ll a, ll b) {
+    if (b==0) return a;
+    else return gcd(b, a%b);
+}
+ll lcm(ll a, ll b) {
+  return a / gcd(a, b) * b;
 }
 
 int main(){
-    std::string S;
-    std::cin >> S;
-    std::string T;
-    std::cin >> T;
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    std::string U;
-    std::cin >> U;
-    solve(S, T, A, B, U);
+    int n;
+    cin >> n;
+    ll T[n];
+    rep(i, 0, n) cin >> T[i];
+
+    ll ans = T[0];
+    rep(i, 1, n){
+        if(ans == T[i]) continue;
+        ans = lcm(ans, T[i]);
+    }
+
+    cout << ans << endl;
     return 0;
 }
