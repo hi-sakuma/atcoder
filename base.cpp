@@ -19,6 +19,25 @@ int main()
     return 0;
 }
 
+for(k=0;k<v.size();k++)
+{
+    cout<<v[k];
+    if(k!=v.size()-1)
+    {
+        cout<<" ";
+    }
+}
+cout<<endl;
+
+bool is_prime(ll n) {
+  if(n==1) return false;
+  if (n == 2) return true;
+  if (n%2 == 0) return false;
+  for(ll d = 3; d*d <= n; d += 2) {
+    if( n % i == 0 ) return false;
+  }
+  return true;
+}
 
 ll gcd(ll a, ll b) {
     if (b==0) return a;
